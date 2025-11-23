@@ -16,6 +16,11 @@ namespace Application
         {
             // Add application services here
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ISkillService, SkillService>();
+            services.AddScoped<IProjectService, ProjectService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<ITechnologyService, TechnologyService>();
+            services.AddScoped<ITimelineEventsService, TimelineEventsService>();
             return services;
         }
     }

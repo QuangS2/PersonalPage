@@ -23,6 +23,11 @@ namespace Infrastructure
 
             //add user repository
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ITechnologyRepository, TechnologyRepository>();
+            services.AddScoped<ITimelineEventsRepository, TimelineEventsRepository>();
             return services;
         }
     }

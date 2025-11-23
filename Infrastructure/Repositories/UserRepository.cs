@@ -22,5 +22,10 @@ namespace Infrastructure.Repositories
             await _context.ApplicationUsers.AddAsync(user);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<ApplicationUser?> GetUserByUserNameAsync(string userName)
+        {
+            return await Task.FromResult(_context.ApplicationUsers.FirstOrDefault(u => u.UserName == userName));
+        }
     }
 }

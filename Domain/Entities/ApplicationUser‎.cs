@@ -23,5 +23,13 @@ namespace Domain.Entities
         public string? FacebookUrl { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        //user have many skills
+        public ICollection<Skills> Skills { get; set; } = new List<Skills>();
+        //user have many projects
+        public ICollection<Projects> Projects { get; set; } = new List<Projects>();
+
+        //user have many TimelineEvents
+        public ICollection<TimelineEvents> TimelineEvents { get; set; } = new List<TimelineEvents>();
     }
 }

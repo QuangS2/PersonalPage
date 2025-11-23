@@ -11,5 +11,7 @@ namespace Application.Interfaces.Repository
     {
         //add user
         Task AddUserAsync(ApplicationUser user);
+        //GetUserByUserNameAsync
+        Task<ApplicationUser?> GetUserByUserNameAsync(string userName);
     }
 }
